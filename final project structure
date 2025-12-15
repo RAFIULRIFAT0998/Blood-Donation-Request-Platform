@@ -1,0 +1,19 @@
+blood_project/
+│
+├── index.php
+├── config.php
+│
+├── includes/
+│   ├── header.php
+│   ├── footer.php
+│
+├── donor/
+│   ├── donate.php
+│   └── donor_list.php
+│
+├── request/
+│   ├── request.php
+│   └── request_list.php
+│
+└── assets/
+    └── style.css
