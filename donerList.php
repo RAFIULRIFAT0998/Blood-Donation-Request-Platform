@@ -1,5 +1,5 @@
 <?php
-include("../config.php");
+include("config.php");
 $d = mysqli_query($conn,"SELECT * FROM donors ORDER BY id DESC");
 ?>
 
@@ -12,11 +12,13 @@ $d = mysqli_query($conn,"SELECT * FROM donors ORDER BY id DESC");
 
 <?php while($row = mysqli_fetch_assoc($d)){ ?>
 <tr>
-<td><?= $row['name'] ?></td>
-<td><?= $row['phone'] ?></td>
-<td class="badge"><?= $row['blood'] ?></td>
-<td><?= $row['message'] ?></td>
+<td><?= htmlspecialchars($row['name']) ?></td>
+<td><?= htmlspecialchars($row['phone']) ?></td>
+<td class="badge"><?= htmlspecialchars($row['blood']) ?></td>
+<td><?= htmlspecialchars($row['message']) ?></td>
 </tr>
 <?php } ?>
+
 </table>
 </div>
+
